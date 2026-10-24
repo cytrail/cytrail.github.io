@@ -1,9 +1,9 @@
 # CyTRAIL Lab website
 
 Source for [cytrail.github.io](https://cytrail.github.io), the website of CyTRAIL Lab
-(Cyber Threat Research and Investigations) at the University of New Haven.
+(Cyber Threat Research and Investigations: Vulnerability to Defense) at the University of New Haven.
 
-Built with Jekyll from the [academic-website-template](https://github.com/sbryngelson/academic-website-template)
+Built with Jekyll adapting from the [academic-website-template](https://github.com/sbryngelson/academic-website-template)
 (MIT License). Pushing to `main` rebuilds and deploys the site through GitHub Actions.
 
 ## Editing content
