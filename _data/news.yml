@@ -5,13 +5,17 @@
 #   Wrap a value in "double quotes" if it contains a colon followed by a space.
 # The sidebar shows the first 3 entries; older ones can stay here as an archive.
 
-- date: "2026"
-  text: Yash Kitey awarded a competitive University Graduate Research Fellowship for 2026&ndash;27 for vulnerability identification research.
+- date: "Oct 2026"
+  text: Our researcher Prathamesh Anil Walunj's recent finding has been validated and resolved by Apple.
   link: /research/#ai-ops
 
 - date: "Sep 2026"
   text: "Indicator of Inconsistency (IoI) Framework published in <em>Forensic Science International: Digital Investigation</em>."
   link: /publications/
+
+- date: "July 2026"
+  text: Yash Kitey awarded a competitive University Graduate Research Fellowship for 2026&ndash;27 for vulnerability identification research.
+  link: /research/#ai-ops
 
 - date: "Apr 2026"
   text: The IoI Framework community catalog is live. Investigators can now contribute anti-forensic scenarios and SPARQL detection rules.
