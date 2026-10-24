@@ -1,0 +1,86 @@
+// =============================================================
+// Design Tokens — Editorial Academic
+// =============================================================
+
+:root {
+  // Accent. Set `accent_color` in _config.yml (it overrides --accent-base);
+  // every other accent variable is derived from it so light and dark mode
+  // both stay readable whatever color is chosen.
+  --accent-base: #1a7a6d;
+  --accent: var(--accent-base);
+  --accent-hover: color-mix(in srgb, var(--accent-base) 82%, black);
+  --accent-light: color-mix(in srgb, var(--accent-base) 8%, transparent);
+  --on-accent: #ffffff;           // text placed on a solid accent background
+
+  // CyTRAIL brand colors (from the original lab page)
+  --navy: #002147;
+  --navy-2: #1a3a6e;
+  --gold: #C8A951;
+  --on-navy: #ffffff;
+  --on-navy-muted: rgba(255, 255, 255, 0.72);
+
+  // Light mode — cool blue-grey neutrals
+  --bg-primary: #f5f7fa;
+  --bg-secondary: #edf1f7;
+  --bg-card: #ffffff;
+  --text-primary: #1a1a2e;
+  --text-secondary: #46465f;
+  --text-muted: #5a5a7a;
+  --border-color: #dde3ee;
+  --shadow-sm: 0 1px 3px rgba(0, 33, 71, 0.06);
+  --shadow-md: 0 4px 12px rgba(0, 33, 71, 0.08);
+  --shadow-lg: 0 8px 24px rgba(0, 33, 71, 0.12);
+  --shadow-navbar: 0 2px 8px rgba(0, 33, 71, 0.25);
+
+  // Layout
+  --container-max: 1100px;
+  --container-padding: 1.5rem;
+
+  // Spacing scale
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+
+  // Border radius
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-full: 9999px;
+
+  // Transitions
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+// Dark mode — deep navy with gold accents
+[data-bs-theme="dark"] {
+  // Gold reads better than navy on dark surfaces
+  --accent: #d6bc6c;
+  --accent-hover: #e6d197;
+  --accent-light: rgba(200, 169, 81, 0.14);
+  --on-accent: #0b1628;
+
+  --navy: #07152b;
+  --gold: #d6bc6c;
+  --on-navy-muted: rgba(255, 255, 255, 0.68);
+
+  --bg-primary: #0b1628;
+  --bg-secondary: #111f36;
+  --bg-card: #142440;
+  --text-primary: #e6ebf3;
+  --text-secondary: #b6c0d1;
+  --text-muted: #8e9ab0;
+  --border-color: #26385a;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --shadow-navbar: 0 1px 4px rgba(0, 0, 0, 0.4);
+}

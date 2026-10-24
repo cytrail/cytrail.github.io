@@ -1,0 +1,24 @@
+# Current researchers, shown as cards on the People page.
+# Each entry needs: name, initials, role, info
+# Optional: photo (file in images/ or images/team/; replaces the initials),
+#           email, website, scholar, github
+
+- name: Prathamesh Anil Walunj
+  initials: PW
+  role: PhD Student · Research Assistant
+  info: Vulnerability Analysis on ARM Platforms · Responsible Disclosure
+
+- name: Yash Kitey
+  initials: YK
+  role: M.S. Student · Graduate Research Fellow (2026–27)
+  info: AI-Assisted Vulnerability Identification in Source Code
+
+- name: Graduate Researchers
+  initials: GR
+  role: 2 M.S. Researchers
+  info: Digital Forensics
+
+- name: Undergraduate Researcher
+  initials: UR
+  role: Undergraduate Researcher · Honors Thesis
+  info: Continuing honors-thesis research

@@ -1,0 +1,19 @@
+# The Lab's four research themes: tiles on the home page and section
+# headings on the Research page. Projects in projects.yml point to a theme by id.
+# Each entry needs: id (used in links, no spaces), title, summary
+
+- id: vulnerability
+  title: Vulnerability Discovery
+  summary: Finding the weaknesses that make attacks possible, and reporting them through coordinated disclosure.
+
+- id: threat
+  title: Threat Research
+  summary: Studying how adversaries exploit weaknesses and how they behave once inside.
+
+- id: forensics
+  title: Digital Forensics
+  summary: Detecting contradictory and tampered digital evidence, and building investigative methods for new technologies.
+
+- id: ai-ops
+  title: AI-Assisted Cyber Operations
+  summary: Applying AI to strengthen vulnerability identification and security operations.

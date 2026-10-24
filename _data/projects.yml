@@ -1,0 +1,70 @@
+# Research projects shown on the Research page, grouped under the themes in themes.yml.
+# Each entry needs: theme, title, status, description, meta
+#   theme:       the id of a theme in themes.yml
+#   status:      the label chip on the card (e.g. "Active Research", "Published 2026")
+#   muted:       true greys out the chip (use for proposed/inactive work)
+#   description: one paragraph, or a list of paragraphs
+#   meta:        the small line at the bottom (people, venue, etc.); HTML entities allowed
+#   Wrap a value in "double quotes" if it contains a colon followed by a space.
+#   links:       optional list of buttons, each with a label and url
+#   hidden:      true keeps the project in this file but off the page
+#
+# Disclosure rule: published work can be described in full. For unpublished work,
+# describe the problem area and the current status only, not methods, models,
+# datasets, or specific targets.
+
+- theme: vulnerability
+  title: Systematic Vulnerability Analysis of ARM-Based Platforms
+  status: Active Doctoral Research
+  description: >-
+    Developing systematic, AI-assisted methodologies for identifying exploitable
+    vulnerabilities in ARM-based software, with the goal of responsible disclosure
+    through coordinated vendor programs and of informing new defensive models.
+  meta: "Prathamesh Anil Walunj, PhD Student &amp; Research Assistant &mdash; Advisor: Dr. Murat Gunestas"
+
+- theme: ai-ops
+  title: AI-Assisted Vulnerability Identification in Source Code
+  status: "Dataset Completed &middot; Fellowship 2026&ndash;27"
+  description: >-
+    Applying machine learning to the identification of security vulnerabilities in
+    real-world source code. A research dataset has been completed, and the project
+    earned a competitive University Graduate Research Fellowship.
+  meta: "Yash Kitey, M.S. Student &mdash; Advisor: Dr. Murat Gunestas"
+
+- theme: forensics
+  title: Indicator of Inconsistency (IoI) Framework
+  status: Published 2026
+  description:
+    - >-
+      A novel framework for defining/sharing/detecting contradictory digital artifacts using
+      schema-consistent SPARQL constraints over CASE/UCO ontology-based knowledge graphs.
+      IoIs highlight events of probative value including anti-forensics activity.
+      Published in Forensic Science International: Digital Investigation (2026).
+    - >-
+      Now an open, community-driven catalog of reusable temporal, structural, and semantic
+      IoI rules, evaluated over 87M+ RDF triples. Investigators and researchers can
+      contribute new anti-forensic scenarios and SPARQL rules.
+  links:
+    - label: IoI Framework site
+      url: https://ioi-framework.github.io/
+    - label: Contribute
+      url: https://ioi-framework.github.io/community/
+    - label: GitHub
+      url: https://github.com/ioi-framework/ioi-framework
+  meta: "With former researchers Kismat Kunwar &amp; Raquel Elisabeth Gabriel Pita &mdash; Advisor: Dr. Murat Gunestas"
+
+- theme: threat
+  title: AI-Assisted Threat-Enabled Deceptive Honey Systems
+  status: Manuscript in Preparation
+  description: >-
+    Deceptive systems that lure and profile adversarial behavior while producing
+    realistic, labeled datasets for forensic research.
+  meta: "Advisor: Dr. Murat Gunestas"
+
+- theme: forensics
+  title: Forensics of AI-Integrated Systems
+  status: Experiments Completed
+  description: >-
+    Developing forensic methodology for emerging AI infrastructure, where no
+    established investigative practice yet exists.
+  meta: "Advisor: Dr. Murat Gunestas"

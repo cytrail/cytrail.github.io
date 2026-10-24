@@ -1,0 +1,30 @@
+# Lab director, shown on the People page.
+- name: Dr. Murat Gunestas
+  initials: MG
+  role: Director, CyTRAIL Lab · Assistant Professor
+  areas:
+    - Vulnerability Discovery
+    - Threat Research
+    - Digital Forensics
+    - AI-Assisted Cyber Operations
+  # Bio paragraphs shown under the director card on the People page (HTML allowed)
+  bio:
+    - >-
+      <strong>Dr. Murat Gunestas</strong> is a Tenure-Track Assistant Professor of Cybersecurity
+      at the University of New Haven. His work bridges offensive security research and digital
+      forensic science, drawing on more than a decade of experience across academic research,
+      applied vulnerability research, government cybercrime investigation, and private-sector
+      digital forensics. He holds a Ph.D. in Information Technology from George Mason University
+      and an M.S. in Computer Engineering.
+    - >-
+      Since 2020, Dr. Gunestas has been a member of the Synack Red Team, a selective, vetted
+      vulnerability research community, through which he identified and was rewarded for
+      approximately 300 security vulnerabilities in production systems by 2023. Earlier in his
+      career, he investigated cybercrime cases at government level and took part in
+      international cybercrime forums, including INTERPOL and the Council of Europe.
+    - >-
+      His research addresses vulnerability detection, digital forensics and cybercrime
+      investigation, and the application of artificial intelligence to security and forensic
+      workflows. He has authored peer-reviewed publications, serves on conference
+      technical program committees, and mentors student researchers and competitive
+      cybersecurity teams. He has held the CISSP certification since 2015.

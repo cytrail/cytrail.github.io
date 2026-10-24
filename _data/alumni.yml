@@ -1,0 +1,13 @@
+# Former researchers and alumni, shown as cards on the People page.
+# Each entry needs: name, initials, role, info
+# Optional: photo (replaces the initials)
+
+- name: Kismat Kunwar
+  initials: KK
+  role: Former Research Assistant
+  info: Indicator of Inconsistency Framework · Digital Artifact Analysis
+
+- name: Raquel Elisabeth Gabriel Pita
+  initials: RP
+  role: Former Undergraduate Researcher
+  info: Indicator of Inconsistency Framework · Digital Forensics

@@ -1,0 +1,603 @@
+// =============================================================
+// CyTRAIL Lab additions — hero extras, research card meta,
+// initials avatars, sidebar facts and "latest news"
+// =============================================================
+
+.eyebrow {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: var(--space-3);
+}
+
+.home-hero-dept {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-top: calc(-1 * var(--space-6));
+  margin-bottom: var(--space-6);
+  max-width: none;
+}
+
+.page-intro {
+  font-size: 1.0625rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-bottom: var(--space-8);
+}
+
+.fine-print {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.callout > p {
+  margin-bottom: 0;
+  color: var(--text-primary);
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-style: italic;
+  font-size: 1.0625rem;
+}
+
+.pipeline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  margin: 0 0 var(--space-4);
+
+  .pipeline-arrow { color: var(--text-muted); }
+}
+
+// Research cards without thumbnails
+.research-card {
+  display: flex;
+  flex-direction: column;
+
+  .research-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    > .chip { align-self: flex-start; margin-bottom: var(--space-3); }
+  }
+
+  .research-meta {
+    margin-top: auto;
+    margin-bottom: 0;
+    padding-top: var(--space-3);
+    border-top: 1px solid var(--border-color);
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+    font-style: italic;
+  }
+}
+
+// Initials in place of a photo
+.initials-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--accent-light);
+  color: var(--accent);
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-weight: 700;
+  font-size: 1.75rem;
+  letter-spacing: -0.01em;
+  user-select: none;
+}
+.pi-card .initials-avatar { font-size: 2.75rem; margin: 0; }
+
+.team-card {
+  .team-role {
+    font-size: 0.8125rem;
+    color: var(--text-secondary);
+    margin: 0 auto var(--space-2);
+  }
+  &.alumni { opacity: 0.85; }
+}
+
+// Sidebar
+.profile-card .profile-facts {
+  text-align: left;
+  list-style: none;
+  padding: var(--space-4) 0 0;
+  margin: var(--space-4) 0 0;
+  border-top: 1px solid var(--border-color);
+
+  li {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    padding: var(--space-1) 0;
+  }
+  span { color: var(--text-muted); }
+}
+
+// "Latest news" sidebar list
+.news-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.news-item {
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--border-color);
+
+  &:first-child { padding-top: 0; }
+  &:last-child { border-bottom: none; padding-bottom: 0; }
+}
+.news-date {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: var(--space-1);
+}
+.news-text {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  margin: 0;
+}
+.news-link {
+  display: inline-block;
+  margin-top: var(--space-1);
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+// Links row on a research card
+.research-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: 0 0 var(--space-3);
+}
+
+// Contact
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-8);
+
+  address {
+    font-style: normal;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin: 0;
+  }
+}
+
+// =============================================================
+// CyTRAIL palette — navy bar and footer, gold highlights
+// (colors from the original lab page)
+// =============================================================
+
+// Navy navbar with white links and gold hover/active
+body .navbar.navbar {
+  background-color: color-mix(in srgb, var(--navy) 96%, transparent) !important;
+  border-bottom: 1px solid color-mix(in srgb, var(--gold) 35%, transparent);
+}
+.navbar-brand {
+  color: var(--on-navy) !important;
+  img { opacity: 1; outline: 1px solid color-mix(in srgb, var(--gold) 70%, transparent); outline-offset: 0; }
+}
+body .navbar .nav-link {
+  color: var(--on-navy-muted) !important;
+
+  &:hover {
+    color: var(--gold) !important;
+    background-color: rgba(255, 255, 255, 0.06);
+  }
+  &.active {
+    color: var(--gold) !important;
+    &::after { background-color: var(--gold); }
+  }
+}
+.navbar .search-toggle,
+.navbar .dark-mode-toggle,
+.navbar .navbar-toggler {
+  color: var(--on-navy-muted);
+  border-color: rgba(255, 255, 255, 0.25);
+
+  &:hover {
+    color: var(--gold);
+    border-color: var(--gold);
+    background-color: rgba(200, 169, 81, 0.12);
+  }
+}
+body .navbar .navbar-toggler-icon { filter: invert(1); }
+@media (max-width: 767px) {
+  .navbar-collapse,
+  .navbar .d-flex.align-items-center { border-top-color: rgba(255, 255, 255, 0.15); }
+  body .navbar .nav-link.active { background-color: rgba(200, 169, 81, 0.14); }
+}
+
+// Gold accent bars and highlights
+h1::after,
+h2::after { background-color: var(--gold); }
+
+.callout { border-left-color: var(--gold); }
+.callout .callout-icon { color: var(--gold); }
+
+.profile-card::before {
+  background: linear-gradient(90deg, var(--navy), var(--gold));
+}
+
+// Navy badge with gold text, matching the header bar
+.eyebrow {
+  display: inline-block;
+  background-color: var(--navy);
+  color: var(--gold);
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+}
+// Dark-mode --navy is close to the page background, so use the lighter navy
+[data-bs-theme="dark"] .eyebrow {
+  background-color: var(--navy-2);
+  color: var(--gold);
+}
+
+// Initials: navy disc with gold letters, like the original page
+.initials-avatar {
+  background-color: var(--navy);
+  color: var(--gold);
+  border-color: var(--bg-card);
+}
+[data-bs-theme="dark"] .initials-avatar {
+  background-color: #1a3a6e;
+  color: var(--gold);
+}
+
+// Navy footer with gold links
+.site-footer {
+  background-color: var(--navy);
+  border-top: 3px solid var(--gold);
+
+  .footer-heading { color: var(--gold); }
+  p, a { color: var(--on-navy-muted); }
+  a:hover { color: var(--gold); }
+  .footer-copyright {
+    color: rgba(255, 255, 255, 0.55);
+    border-top-color: rgba(255, 255, 255, 0.15);
+  }
+}
+
+// =============================================================
+// v2: home motto, theme tiles, themed Research page
+// =============================================================
+
+.motto {
+  margin: var(--space-6) 0;
+  padding: 0 0 0 var(--space-4);
+  border-left: 3px solid var(--gold);
+
+  p {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 1.25rem;
+    font-style: italic;
+    line-height: 1.5;
+    color: var(--text-primary);
+    margin: 0;
+  }
+}
+
+.theme-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+  margin: var(--space-4) 0 var(--space-6);
+
+  @media (max-width: 640px) { grid-template-columns: 1fr; }
+}
+.theme-tile {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-4) var(--space-5, 1.25rem);
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-top: 3px solid var(--navy);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+
+  &:hover { border-top-color: var(--gold); transform: translateY(-2px); }
+}
+[data-bs-theme="dark"] .theme-tile { border-top-color: var(--gold); }
+.theme-title {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.35;
+  color: var(--text-primary);
+}
+.theme-summary {
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+
+.join-callout { margin-top: var(--space-6); }
+
+.research-theme {
+  margin-bottom: var(--space-8, 3rem);
+  scroll-margin-top: 5rem;
+
+  .theme-intro {
+    color: var(--text-secondary);
+    margin-bottom: var(--space-4);
+  }
+}
+
+// Director bio under the PI card on the People page
+.pi-bio {
+  margin-top: var(--space-6);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--border-color);
+
+  p { color: var(--text-secondary); line-height: 1.75; }
+  p:last-child { margin-bottom: 0; }
+}
+
+// Acronym letters in the home subtitle (color only, no bold)
+.home-hero-sub .acro {
+  font-weight: inherit;
+  color: #a5822a;  // darker gold: readable on the light background
+}
+[data-bs-theme="dark"] .home-hero-sub .acro { color: var(--gold); }
+
+// Department line as a small tracked label with a gold rule
+.home-hero .home-hero-dept,
+.home-hero-dept {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+
+  &::before {
+    content: "";
+    flex: 0 0 2rem;
+    height: 2px;
+    background-color: var(--gold);
+  }
+}
+
+// Lab name on the home page: one uniform style, gold "!" as the only accent
+.home-hero {
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+
+  .hero-mark,
+  .hero-lab { font-weight: 800; font-style: normal; }
+  .hero-bang { color: var(--gold); }
+}
+
+// Hero panel: navy background with a faint grid and a soft gold glow
+.hero-panel {
+  position: relative;
+  overflow: hidden;
+  padding: var(--space-8) var(--space-8) var(--space-6);
+  margin-bottom: var(--space-8);
+  border-radius: var(--radius-lg);
+  border: 1px solid color-mix(in srgb, var(--gold) 30%, transparent);
+  background:
+    radial-gradient(circle at 92% 12%, rgba(200, 169, 81, 0.28), transparent 42%),
+    radial-gradient(circle at 0% 100%, rgba(47, 94, 163, 0.35), transparent 50%),
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px) 0 0 / 28px 28px,
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px) 0 0 / 28px 28px,
+    linear-gradient(135deg, #002147 0%, #0b2f5e 60%, #12396f 100%);
+  box-shadow: 0 12px 32px rgba(0, 33, 71, 0.18);
+
+  @media (max-width: 640px) {
+    padding: var(--space-6) var(--space-4) var(--space-4);
+  }
+
+  .eyebrow {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: none;
+    color: #d6bc6c;
+  }
+  .home-hero .hero-mark,
+  .home-hero .hero-lab,
+  .home-hero .hero-bang { color: #d6bc6c; }
+  // One gold-outlined box: "CyTRA!L" navy on gold, "Lab" gold on navy
+  .home-hero .hero-box {
+    display: inline-flex;
+    align-items: stretch;
+    border: 2px solid #d6bc6c;
+    border-radius: 0.18em;
+    overflow: hidden;
+  }
+  .home-hero .hero-mark,
+  .home-hero .hero-lab { padding: 0.04em 0.22em 0.08em; }
+  .home-hero .hero-mark { background-color: #d6bc6c; }
+  .home-hero .hero-mark,
+  .home-hero .hero-mark .hero-bang { color: #002147; }
+  .home-hero-sub { color: rgba(255, 255, 255, 0.82); }
+  .home-hero-sub .acro { color: #d6bc6c; }
+  .home-hero-dept { color: rgba(255, 255, 255, 0.62); margin-bottom: 0; }
+  .home-hero-dept::before { background-color: #d6bc6c; }
+}
+[data-bs-theme="dark"] .hero-panel {
+  border-color: color-mix(in srgb, var(--gold) 40%, transparent);
+  box-shadow: none;
+}
+
+// Gold "!" in the lab name wherever it appears (menu bar, lab card, footer)
+.wordmark-bang { color: var(--gold); }
+
+// Menu bar lab name: one gold-outlined box, "CyTRA!L" navy on gold, "Lab" gold on navy
+.navbar-brand .wordmark { color: #d6bc6c; }
+.navbar-brand .wordmark-inner {
+  display: inline-flex;
+  align-items: stretch;
+  border: 1.5px solid #d6bc6c;
+  border-radius: 0.25em;
+  overflow: hidden;
+  line-height: 1.25;
+}
+.navbar-brand .wordmark-mark,
+.navbar-brand .wordmark-lab { padding: 0.02em 0.32em 0.06em; }
+.navbar-brand .wordmark-mark { background-color: #d6bc6c; color: #002147; }
+.navbar-brand .wordmark-mark .wordmark-bang { color: #002147; }
+
+// Lab card (top right of Home): gold panel with navy text
+.profile-card {
+  background:
+    radial-gradient(circle at 85% 8%, rgba(255, 255, 255, 0.45), transparent 42%),
+    linear-gradient(rgba(0, 33, 71, 0.06) 1px, transparent 1px) 0 0 / 24px 24px,
+    linear-gradient(90deg, rgba(0, 33, 71, 0.06) 1px, transparent 1px) 0 0 / 24px 24px,
+    linear-gradient(160deg, #e3cb83 0%, #d4b764 60%, #c8a951 100%);
+  border: 1px solid #b89a44;
+  color: #002147;
+
+  &::before { display: none; }
+
+  .profile-photo {
+    width: 88px;
+    height: 88px;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    object-fit: contain;
+    background: none;
+  }
+  .profile-name {
+    color: #002147;
+    margin-top: var(--space-2);
+  }
+  .profile-name .wordmark-mark {
+    display: inline-block;
+    padding: 0 0.28em 0.04em;
+    margin-right: 0.1em;
+    border: 1.5px solid #002147;
+    border-radius: 0.25em;
+  }
+  .profile-name .wordmark-bang { color: #002147; }
+  .profile-title { color: #2a2410; }
+  .profile-institution { color: #002147; font-weight: 600; }
+  .profile-facts {
+    border-top-color: rgba(0, 33, 71, 0.2);
+    li { color: #002147; }
+    span { color: #5c4715; }
+  }
+}
+
+// Full-width title panel: text on the left, lens "!" logo on the right
+.hero-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-8);
+
+  .hero-text { min-width: 0; }
+  .hero-logo {
+    flex: 0 0 auto;
+    width: 120px;
+    height: 120px;
+    margin-right: var(--space-4);
+    opacity: 0.95;
+    filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.25));
+
+    @media (max-width: 768px) { display: none; }
+  }
+}
+
+// No gold rule before the department line
+.home-hero-dept::before,
+.hero-panel .home-hero-dept::before { content: none; display: none; }
+
+// =============================================================
+// v4 palette: slate grey #4E5A66 + beige #E8DCC4
+// cream #F3EBDD for text on slate; #3B444D for text on beige;
+// #424C57 for links on white; #A89272 (deeper tan) for bars on white
+// =============================================================
+:root {
+  --navy: #4E5A66;
+  --navy-2: #46515C;
+  --gold: #A89272;
+  --on-navy: #F3EBDD;
+  --on-navy-muted: rgba(243, 235, 221, 0.85);
+  --bg-primary: #F8F7F3;
+  --bg-secondary: #F0EEE7;
+  --border-color: #E2DED3;
+}
+[data-bs-theme="dark"] {
+  --accent: #E8DCC4;
+  --accent-hover: #F2EADB;
+  --accent-light: rgba(232, 220, 196, 0.12);
+  --on-accent: #15191D;
+  --navy: #1E2329;
+  --navy-2: #2F363E;
+  --gold: #E8DCC4;
+  --on-navy: #F3EBDD;
+  --on-navy-muted: #CFC8B8;
+  --bg-primary: #14181C;
+  --bg-secondary: #1A1F24;
+  --bg-card: #20262C;
+  --text-primary: #F1EEE6;
+  --text-secondary: #C9C4B6;
+  --text-muted: #9C9786;
+  --border-color: #2E353D;
+}
+
+// Menu bar: slate with cream links, beige hover/active
+body .navbar.navbar {
+  background-color: #4E5A66 !important;
+  border-bottom: 1px solid rgba(232, 220, 196, 0.3);
+}
+body .navbar .nav-link { color: rgba(243, 235, 221, 0.85) !important; }
+body .navbar .nav-link:hover,
+body .navbar .nav-link.active { color: #E8DCC4 !important; }
+body .navbar .nav-link.active::after { background-color: #E8DCC4 !important; }
+.navbar .search-toggle,
+.navbar .dark-mode-toggle,
+.navbar .navbar-toggler { color: rgba(243, 235, 221, 0.85); border-color: rgba(243, 235, 221, 0.3); }
+body .navbar .navbar-toggler-icon { filter: invert(1); }
+.navbar-brand .wordmark { color: #E8DCC4; }
+.navbar-brand .wordmark-inner { border-color: #E8DCC4; }
+.navbar-brand .wordmark-mark { background-color: #E8DCC4; color: #3B444D; }
+.navbar-brand .wordmark-mark .wordmark-bang { color: #3B444D; }
+
+[data-bs-theme="dark"] body .navbar.navbar { background-color: #1E2329 !important; }
+
+// Title panel: slate with a soft beige glow
+.hero-panel {
+  border: 1px solid #46515C;
+  background:
+    radial-gradient(circle at 92% 12%, rgba(232, 220, 196, 0.26), transparent 42%),
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px) 0 0 / 28px 28px,
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px) 0 0 / 28px 28px,
+    linear-gradient(135deg, #46515C 0%, #4E5A66 60%, #5F6A75 100%);
+  box-shadow: 0 12px 32px rgba(78, 90, 102, 0.22);
+
+  .eyebrow { background-color: rgba(255, 255, 255, 0.1); color: #E8DCC4; }
+  .home-hero .hero-box { border-color: #E8DCC4; }
+  .home-hero .hero-mark,
+  .home-hero .hero-mark .hero-bang { background-color: #E8DCC4; color: #3B444D; }
+  .home-hero .hero-lab { color: #E8DCC4; }
+  .home-hero-sub { color: #F3EBDD; }
+  .home-hero-sub .acro { color: #E8DCC4; }
+  .home-hero-dept { color: rgba(243, 235, 221, 0.8); }
+}
+[data-bs-theme="dark"] .hero-panel {
+  border-color: rgba(232, 220, 196, 0.3);
+  box-shadow: none;
+  background:
+    radial-gradient(circle at 92% 12%, rgba(232, 220, 196, 0.14), transparent 42%),
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px) 0 0 / 28px 28px,
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px) 0 0 / 28px 28px,
+    linear-gradient(135deg, #232930 0%, #2F363E 60%, #3B444D 100%);
+}

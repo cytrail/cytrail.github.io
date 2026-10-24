@@ -1,0 +1,14 @@
+{% if site.data.news.size > 0 %}
+<div class="section-card">
+<h2 style="margin-top: 0; font-size: 1.125rem;">Latest news</h2>
+<ul class="news-list">
+{% for item in site.data.news limit: 3 %}
+<li class="news-item">
+<div class="news-date">{{ item.date }}</div>
+<p class="news-text">{{ item.text }}</p>
+{% if item.link %}{% assign news_external = item.link | slice: 0, 4 %}<a class="news-link" href="{% if news_external == 'http' %}{{ item.link }}{% else %}{{ item.link | relative_url }}{% endif %}"{% if news_external == 'http' %} target="_blank" rel="noopener"{% endif %}>Read more &rarr;</a>{% endif %}
+</li>
+{% endfor %}
+</ul>
+</div>
+{% endif %}
